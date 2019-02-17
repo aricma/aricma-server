@@ -1,0 +1,19 @@
+{
+  "name": "aricma-server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.js",
+  "repository": "https://github.com/aricma/aricma-server.git",
+  "author": "aricma <adrian@aricma.com>",
+  "scripts": {
+    "start": "PORT=5000 nodemon --require dotenv/config ./src/index.js",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "nodemailer": "^5.1.1"
+  }
+}
