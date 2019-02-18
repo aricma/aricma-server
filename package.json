@@ -6,8 +6,7 @@
   "repository": "https://github.com/aricma/aricma-server.git",
   "author": "aricma <adrian@aricma.com>",
   "scripts": {
-    "start": "PORT=5000 nodemon --require dotenv/config ./src/index.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "start": "PORT=5000 nodemon --require dotenv/config ./src/index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
