@@ -65,8 +65,8 @@ function sendEmailHandler(req, res, next) {
   ])
   .then(() => {
     const succsessMessage = 'all emails were send'
-    console.log(succsessMessage);
-    res.send(succsessMessage)
+    // console.log(succsessMessage);
+    res.status(200).send(succsessMessage)
   })
   .catch((err) => {
     console.error(err);
