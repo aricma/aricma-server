@@ -30,12 +30,12 @@ app.use(function(req, res, next) {
 })
 
 // SET UP STATIC FILES
-const path = require('path')
-app.use(express.static(path.join(__dirname, 'client/build')));
+// const path = require('path')
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
 // ROUTES
 // const views = require('./routes')
-// app.get('/', (req,res,next) => res.status(200).render('index'))
+app.get('/', (req,res,next) => res.status(200).send('server up and running'))
 // app.get('/monkey-office', (req,res,next) => res.status(200).render('monkey-office'))
 
   // webhooks
