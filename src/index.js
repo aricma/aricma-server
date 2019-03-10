@@ -9,7 +9,7 @@ const app = express()
 const {webhookRouter} = require('./webhook/index.js')
 
 // port
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 // BODY PARSER set up
 const bodyParser = require('body-parser')
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // CORS to Allow sertain urls to send requests
 app.use(function(req, res, next) {
-  const allowedOrigins = ['http://localhost:3000', 'http://localhost:5000', 'https://www.aricma.com', 'https://aricma-homepage.herokuapp.com'];
+  const allowedOrigins = ['http://localhost:3000', 'http://localhost:5000', 'https://www.aricma.com', 'https://aricma.com', 'https://aricma-homepage.herokuapp.com'];
   const origin = req.headers.origin
   if(allowedOrigins.indexOf(origin) > -1){
     res.setHeader('Access-Control-Allow-Origin', origin)
